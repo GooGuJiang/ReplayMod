@@ -10,12 +10,6 @@ For compiling 1.7.10, you must run `./gradlew :jGui:1.7.10:setupDecompWorkspace 
 You can build the mod by running `./gradlew build` (or just `./gradlew bundleJar`). You can then find the final jar files in `versions/$MCVERSION/build/libs/`.
 You can also build single versions by running `./gradlew :1.8:build` (or just `./gradlew :1.8:bundleJar`) (builds the MC 1.8 version).
 
-### GitHub Actions
-This repository contains a workflow at `.github/workflows/build.yml`.
-Every push or pull request automatically compiles the mod and uploads
-the resulting jar files as workflow artifacts. Navigate to the "Build"
-workflow on GitHub and download the artifacts from a run to obtain the
-pre-built jars.
 
 ### Docker
 You can also build the mod in a Docker container. Run
