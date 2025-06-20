@@ -20,6 +20,7 @@ artifact from a run to obtain the pre-built jar.
 ### Docker
 You can also build the mod in a Docker container. The Dockerfile installs
 Git because several Gradle tasks rely on it. Run
+
 `docker buildx build --output type=local,dest=output .` and find the
 compiled jars inside `output/versions/*/build/libs/`. The workflow
 `docker-build.yml` demonstrates building with Docker on GitHub.
