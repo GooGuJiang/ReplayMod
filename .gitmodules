@@ -6,5 +6,5 @@
 	path = src/main/resources/assets/replaymod/lang
 	url = https://github.com/ReplayMod/Translations
 [submodule "ReplayStudio"]
-	path = libs/ReplayStudio
-	url = ../ReplayStudio
+        path = libs/ReplayStudio
+        url = https://github.com/ReplayMod/ReplayStudio
