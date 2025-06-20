@@ -21,9 +21,9 @@ jobs:
           java-version: 17
           cache: gradle
 
-      - name: Build
+      - name: Build ReplayMod 1.21.6
         run: ./gradlew :1.21.6:build --parallel --no-daemon
-        
+
       - name: Upload jars
         uses: actions/upload-artifact@v4
         with:
