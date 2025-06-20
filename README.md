@@ -10,6 +10,20 @@ For compiling 1.7.10, you must run `./gradlew :jGui:1.7.10:setupDecompWorkspace 
 You can build the mod by running `./gradlew build` (or just `./gradlew bundleJar`). You can then find the final jar files in `versions/$MCVERSION/build/libs/`.
 You can also build single versions by running `./gradlew :1.8:build` (or just `./gradlew :1.8:bundleJar`) (builds the MC 1.8 version).
 
+### GitHub Actions
+This repository contains a workflow at `.github/workflows/build.yml`.
+Every push or pull request automatically builds the latest Minecraft version
+(currently **1.21.6**) and uploads the resulting jar file as a workflow
+artifact. Navigate to the "Build" workflow on GitHub and download the
+artifact from a run to obtain the pre-built jar.
+
+### Docker
+You can also build the mod in a Docker container. The Dockerfile installs
+Git because several Gradle tasks rely on it. Run
+`docker buildx build --output type=local,dest=output .` and find the
+compiled jars inside `output/versions/*/build/libs/`. The workflow
+`docker-build.yml` demonstrates building with Docker on GitHub.
+
 ### IntelliJ
 Ensure you have at least IDEA 2020.1.
 Build the mod via Gradle as explained above at least once (`./gradlew compileJava` should be sufficient). This will ensure that the sources for all MC versions are generated.
